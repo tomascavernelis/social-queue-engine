@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+data/history.jsonl
+output/*
+!output/.gitkeep
+.env

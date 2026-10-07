@@ -1,0 +1,41 @@
+{
+  "_comment": "DEMO data: three fictional accounts. Replace with your own.",
+  "settings": {
+    "min_gap_minutes": 90,
+    "no_posts_after": "21:30",
+    "max_burst": {"count": 3, "window_minutes": 30},
+    "caption_cooldown_days": 14,
+    "variant_lookback_days": 7,
+    "check_files": false
+  },
+  "accounts": [
+    {
+      "id": "acct-a", "network": "facebook",
+      "slots": ["10:30", "14:00", "19:30"], "link_slot": "19:30", "link": "example.com/a",
+      "winners": [
+        {"id": "a-w1", "file": "clips/a-w1.mp4", "views": 84000, "plain": true},
+        {"id": "a-w2", "file": "clips/a-w2.mp4", "views": 51000, "plain": false},
+        {"id": "a-w3", "file": "clips/a-w3.mp4", "views": 33000, "plain": true}
+      ],
+      "tests": [
+        {"id": "a-t1", "file": "clips/a-t1.mp4", "variable": "hook", "arm": "B"},
+        {"id": "a-t2", "file": "clips/a-t2.mp4", "variable": "length", "arm": "B"}
+      ]
+    },
+    {
+      "id": "acct-b", "network": "facebook",
+      "slots": ["11:15", "15:20", "20:10"], "link_slot": "20:10", "link": "example.com/b",
+      "winners": [
+        {"id": "b-w1", "file": "clips/b-w1.mp4", "views": 120000, "plain": true},
+        {"id": "b-w2", "file": "clips/b-w2.mp4", "views": 47000, "plain": true}
+      ],
+      "tests": [{"id": "b-t1", "file": "clips/b-t1.mp4", "variable": "slot", "arm": "B"}]
+    },
+    {
+      "id": "acct-c", "network": "instagram",
+      "slots": ["12:40", "18:00"], "link_slot": "18:00", "link": "example.com/c",
+      "winners": [{"id": "c-w1", "file": "clips/c-w1.mp4", "views": 62000, "plain": false}],
+      "tests": [{"id": "c-t1", "file": "clips/c-t1.mp4", "variable": "caption", "arm": "B"}]
+    }
+  ]
+}
